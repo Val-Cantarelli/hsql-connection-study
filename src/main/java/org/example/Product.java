@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity // sinaliza ao Hibernate que cada objeto é uma linha numa tabela do DB
+@Entity // indicates to Hibernate that each instance maps to a row in the DB table
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

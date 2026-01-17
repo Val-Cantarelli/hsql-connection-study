@@ -1,7 +1,10 @@
 package org.example;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+/**
+ * Repository interface for Product persistence.
+ * Provides CRUD operations via Spring Data JPA.
+ */
 
-// JPA é pra qualquer DB - é o manual universal do Java para DB
 public interface ProductRepository extends JpaRepository<Product, Long> {
 }
