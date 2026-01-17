@@ -23,5 +23,11 @@ public class ProductController {
     public List<Product> list(){return repository.findAll();}
 
     @PostMapping("/{name}")
-    public Product create(@PathVariable String name){return repository.save(new Product((name)));}
+    public Product create(@PathVariable String name){
+        //System.out.println("Holding up connection for 8 seconds...");
+        try {
+            System.out.println(">>> Holding connection to "+ name);
+            Thread.sleep(10000);
+        } catch (InterruptedException e) { }
+        return repository.save(new Product(name));}
 }
